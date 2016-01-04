@@ -1,0 +1,22 @@
+<header>
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" ng-controller="NavbarCtrl as nc">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#index-navbar">
+          <span class="sr-only"> Toggle Navigation </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/home"> <strong> {{ nc.brand }} </strong> </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="index-navbar">
+        <ul class="nav navbar-nav">
+          <li ng-class="{active: nc.isActive('/home')}"> <a ui-sref="home"> Home </a></li>
+          <li ng-class="{active: nc.isActive('/about')}"><a ui-sref="about"> About </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
